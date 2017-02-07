@@ -9,6 +9,7 @@ class SessionsController < ApplicationController
       u.email = auth['info']['email']
     end
     session[:user_id] = user.id
+    redirect_to 'recipes#index'
   end
 
   def auth
