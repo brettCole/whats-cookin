@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root 'pages#main'
   #get '/auth/google_oauth2' => 'sessions#create'
-  get '/auth/:provider/callback' => 'sessions#create'
+  get '/auth/:provider/callback', to: 'sessions#create'
   #get '/auth/google/callback' => 'sessions#create'
   #get '/auth/facebook/callback' => 'sessions#create'
   resources :sessions

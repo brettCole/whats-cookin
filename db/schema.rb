@@ -39,7 +39,7 @@ ActiveRecord::Schema.define(version: 20170205033259) do
     t.string   "username"
     t.string   "email"
     t.string   "password_digest"
-    t.integer  "uid",             limit: 8
+    t.string   "uid",             limit: 8
     t.datetime "created_at",                null: false
     t.datetime "updated_at",                null: false
   end

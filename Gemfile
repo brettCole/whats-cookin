@@ -38,6 +38,8 @@ gem 'omniauth-twitter'
 gem 'omniauth-gplus'
 gem 'omniauth-facebook'
 
+gem 'pry'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

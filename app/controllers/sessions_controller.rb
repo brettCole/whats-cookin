@@ -10,6 +10,7 @@ class SessionsController < ApplicationController
     end
     session[:user_id] = user.id
     redirect_to 'recipes#index'
+   #render text: request.env['omniauth.auth'].to_yaml
   end
 
   def auth
