@@ -35,7 +35,6 @@ gem 'bcrypt' #'~> 3.1.7'
 #OmniAuth for third-party signin
 gem 'omniauth'
 gem 'omniauth-twitter'
-gem 'omniauth-gplus'
 gem 'omniauth-facebook'
 
 gem 'pry'
