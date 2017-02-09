@@ -1,0 +1,7 @@
+<%= form_for @user do |f| %>
+  Email:<br>
+  <%= f.text_field :email %><br><br>
+  Password:<br>
+  <%= f.password_field :password %><br><br>
+  <%= f.submit 'Login' %>
+<% end %>

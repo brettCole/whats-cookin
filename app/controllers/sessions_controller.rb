@@ -4,9 +4,18 @@ class SessionsController < ApplicationController
   end
 
   def create
-    @user = User.from_omniauth(request.env[ 'omniauth.auth'])
-    session[:user_id] = @user.id
-    redirect_to user_path(@user)
+    auth = request.env['omniauth.auth']
+    binding.pry
+    @user = User.find_or_create_by!(uid: auth['uid']) do |u|
+      u.provider = auth['provider']
+      #u.uid = auth['uid']
+      u.name = auth['info']['name']
+      u.email = auth['info']['email']
+      u.password = SecureRandom.hex
+    end
+    current_user = @user.id
+    #session[:user_id] = @user.id
+    redirect_to users_path(@user)
   end
 
   def destroy
