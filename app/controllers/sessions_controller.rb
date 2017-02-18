@@ -21,7 +21,6 @@ class SessionsController < ApplicationController
     if auth
       @user = User.sign_in_with_auth(auth)
       session[:id] = @user.id
-      binding.pry
     else
       # @user = User.sign_in_with_password
       # session[:id] = @user.id
@@ -29,10 +28,9 @@ class SessionsController < ApplicationController
       @user = User.find_by(email: params[:email])
       if @user == @user.authenticate(params[:password]) && @user.provider.nil?
         session[:id] = @user.id
-        binding.pry
       end
     end
-    redirect_to '/recipes/index'
+    redirect_to user_path(@user)
   end
 
   def destroy

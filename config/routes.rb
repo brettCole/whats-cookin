@@ -5,6 +5,9 @@ Rails.application.routes.draw do
   #get '/auth/google/callback' => 'sessions#create'
   #get '/auth/facebook/callback' => 'sessions#create'
   delete '/sessions/:id' => 'sessions#destroy'
+  resources :users do
+    resources :recipes
+  end
   resources :sessions
   resources :ingredients
   resources :users

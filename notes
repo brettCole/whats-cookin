@@ -1,0 +1,23 @@
+√ 1. Signup w/omniauth
+√ 2. Signup w/form
+√ 3. Login
+√ 4. Logout
+ 5. Create new recipe
+  - Form to create new recipe
+  - Nested form to include Ingredient values
+ 6. Recipe Edit page
+  - Edit details of recipe if signed in
+ 7. Recipe Index page
+  - Show a list of Recipes
+  - Give option to create new recipe
+    - If signed in take to page to create recipe
+    - If not signed in give warning and take to signin page
+ 8. Recipe Show page
+  - Show all the details of an individual recipe
+9. User - :slug name for RESTful /  Ability to Rate and Review Recipes / Omniauth Profile Picture
+10. User Show page
+  - Show Personally Created Recipes
+  - Link to Recipes
+  - Random Recipe of the Day
+11. Rating
+  - include review form with rating option

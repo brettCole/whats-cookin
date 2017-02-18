@@ -3,8 +3,9 @@ class CreateRecipes < ActiveRecord::Migration[5.0]
     create_table :recipes do |t|
       t.string :name
       t.text :directions
-      t.boolean :vegan
-      t.boolean :gluten_free
+      t.boolean :vegan, default: false
+      t.text :description
+      t.integer :user_id
 
       t.timestamps
     end
