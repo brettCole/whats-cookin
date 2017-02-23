@@ -1,0 +1,23 @@
+<%= form_for @recipe, :url => { :action => "create" } do |f| %>
+
+  <%= f.label :name %>
+  <%= f.text_field :name %><br>
+
+  <%= f.label :description %>
+  <%= f.text_area :description %><br>
+
+  <% 5.times do %>
+    <%= f.fields_for :ingredients, @recipe.ingredients.new do |ingredient| %>
+      <%= ingredient.label :name, value='Ingredients' %>
+      <%= ingredient.text_field :name %><br>
+    <% end %>
+  <% end %>
+
+  <%= f.label :directions %>
+  <%= f.text_area :directions %><br>
+
+  <%= f.label :vegan %>
+  <%= f.check_box :vegan %><br>
+
+  <%= f.submit %>
+<% end %>

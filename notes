@@ -20,4 +20,5 @@
   - Link to Recipes
   - Random Recipe of the Day
 11. Rating
-  - include review form with rating option
+  - RESTful resource
+    - include review form with rating option

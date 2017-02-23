@@ -6,7 +6,6 @@ class CreateUsers < ActiveRecord::Migration[5.0]
       #Omniauth params
       t.string :provider
       t.string :name
-      #t.string :screen_name
       t.string :uid, limit: 8
 
       t.timestamps

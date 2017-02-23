@@ -1,4 +1,3 @@
 <%= current_user.name %>
-<%= form_for @recipe do |f| %>
-  <%= f.recipe.ingredient :ingredient %>
-<% end %>
+<!-- <%# link_to 'Create Recipe', new_user_recipe_path(current_user) %> -->
+<%= link_to 'Create Recipe', new_recipe_path(current_user) %>
