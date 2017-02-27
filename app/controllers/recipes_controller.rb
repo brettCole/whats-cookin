@@ -6,16 +6,16 @@ class RecipesController < ApplicationController
 
   def new
     @recipe = Recipe.new
-    #@recipe.ingredients.build
-    #@ingredients = @recipe.ingredients.build
   end
 
   def create
     @recipe = current_user.recipes.create(recipe_params)
-    #@ingredients = @recipe.ingredients.build
-    @recipe.save
-    binding.pry
-    redirect_to recipe_path(@recipe)
+    if @recipe.save
+      binding.pry
+      redirect_to recipe_path(@recipe)
+    else
+      render :new
+    end
   end
 
   def show

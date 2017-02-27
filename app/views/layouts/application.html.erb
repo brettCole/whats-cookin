@@ -1,29 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <title>WhatsCookin</title>
     <%= csrf_meta_tags %>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
-    <h1>Let's Get Cookin</h1>
-    <p>Bon Appétit</p><br>
-    <% if !logged_in? %>
-      <%= link_to 'Login with Twitter!', '/auth/twitter' %><br>
-      <%= link_to 'Login with Facebook!', '/auth/facebook' %><br>
-      <%= link_to 'Signup', new_user_path %><br>
-      <%= link_to 'Login', new_session_path %><br>
-    <% elsif logged_in? %>
-      <%= form_tag session_path(current_user), method: 'delete' do %>
-        <%= submit_tag 'Logout' %>
-      <% end %>
-    <% else %>
-      <%= link_to 'Login with Twitter!', '/auth/twitter' %><br>
-      <%= link_to 'Login with Facebook!', '/auth/facebook' %><br>
-    <% end %>
+    <p class="logo">Bon Appétit</p><br>
+    <h1 class="cookin_logo">Let's Get Cookin</h1>
+    <!-- helper_method inside helpers/application_helper.rb file -->
     <%= yield %>
+    <%= which_layout %>
   </body>
 </html>

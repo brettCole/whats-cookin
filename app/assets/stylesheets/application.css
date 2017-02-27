@@ -13,3 +13,20 @@
  *= require_tree .
  *= require_self
  */
+.icon_div {
+  height: 50px;
+  width: 50px;
+}
+
+.icon {
+  width: 100%;
+}
+
+.logo {
+  margin-bottom: -15px;
+  margin-left: 20px;
+}
+
+.cookin_logo {
+  margin-top: -10px;
+}

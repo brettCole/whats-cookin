@@ -37,6 +37,7 @@ gem 'omniauth'
 gem 'omniauth-twitter'
 gem 'omniauth-facebook'
 
+
 gem 'pry'
 
 # Use Capistrano for deployment

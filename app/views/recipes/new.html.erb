@@ -7,8 +7,8 @@
   <%= f.text_area :description %><br>
 
   <% 5.times do %>
-    <%= f.fields_for :ingredients, @recipe.ingredients.new do |ingredient| %>
-      <%= ingredient.label :name, value='Ingredients' %>
+    <%= f.fields_for :ingredients @recipe.ingredients.build do |ingredient| %>
+      <%= ingredient.label :name, value='Ingredient' %>
       <%= ingredient.text_field :name %><br>
     <% end %>
   <% end %>

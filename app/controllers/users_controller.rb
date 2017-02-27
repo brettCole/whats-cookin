@@ -21,6 +21,7 @@ class UsersController < ApplicationController
 
   def show
     current_user
+    @recipes = current_user.recipes.all
   end
 
   def destroy
