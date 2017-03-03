@@ -1,17 +1,12 @@
-<%= form_for @recipe, :url => { :action => "create" } do |f| %>
+<%= form_for @recipe, :url => { :action => "create" }, class: "@form" do |f| %>
 
-  <%= f.label :name %>
-  <%= f.text_field :name %><br>
+  <%= f.label :title %>
+  <%= f.text_field :title %><br>
 
   <%= f.label :description %>
   <%= f.text_area :description %><br>
 
-  <% 5.times do %>
-    <%= f.fields_for :ingredients @recipe.ingredients.build do |ingredient| %>
-      <%= ingredient.label :name, value='Ingredient' %>
-      <%= ingredient.text_field :name %><br>
-    <% end %>
-  <% end %>
+
 
   <%= f.label :directions %>
   <%= f.text_area :directions %><br>

@@ -37,6 +37,9 @@ gem 'omniauth'
 gem 'omniauth-twitter'
 gem 'omniauth-facebook'
 
+#Semanti-UI for rails 
+gem 'semantic-ui-rails'
+
 
 gem 'pry'
 
