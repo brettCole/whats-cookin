@@ -40,6 +40,8 @@ gem 'omniauth-facebook'
 #Semanti-UI for rails 
 gem 'semantic-ui-rails'
 
+gem "actionview", ">= 5.0.7.2"
+
 
 gem 'pry'
 
